@@ -15,10 +15,13 @@ public class NewGame extends javax.swing.JFrame {
     /**
      * Creates new form NewGame
      */
+	
     public String userName = "";
+	//word collections
     String[] words = { "teacher", "artist", "doctor", "attorney", "chef", "fireman", "programmer", 
         "gardener", "model", "pilot", "pharmacist", "designer", "nurse", "accountant", "engineer", "student", "astronaut",
         "bartender", "policeman", "journalist"};
+	//random the word to guess
     int randomWordNumber = (int) (Math.random() * words.length);
     char[] enteredLetters = new char[words[randomWordNumber].length()];
     static int wrongCount = 0;
@@ -31,7 +34,7 @@ public class NewGame extends javax.swing.JFrame {
     public  void run(String username){
     
 	}
-
+	//pop-up shows win or lose
 	public  void enterLetter(String word, char[] enteredLetters) {
             
             if(questionText.getText().equalsIgnoreCase(word))
